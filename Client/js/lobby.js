@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("http://localhost:3000");
 const action = localStorage.getItem("action");
 
 const createSection = document.getElementById("Create-Room");
@@ -20,7 +20,7 @@ if(action === "create")
 else if(action === "join")  
     show(joinSection);
 
-document.querySelector("#Create-Room .create").addEventListener("click", () => {
+document.querySelector("#generate-room").addEventListener("click", () => {
 
     const name = document.querySelector("#Create-Room .name-input").value;
     if(!name)
