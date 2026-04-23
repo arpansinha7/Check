@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("http://localhost:3000");
 socket.on("connect", () => {
     console.log("Socket Connected:", socket.id);
     const roomId = localStorage.getItem("roomId");
